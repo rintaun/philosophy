@@ -1,6 +1,6 @@
 # Coding
 
-## Indentation and Alignment
+## Indentation vs. Alignment
 
 Very few coding style guides that I have read have made any distinction between
 indentation and alignment, and even the few that did, it was only a very brief
@@ -20,7 +20,7 @@ following example illustrates multiple levels of indentation:
 ```
 for i in 1..100:
 	if is_even(i):
-		print 'Even!';
+		print 'Even!'
 	end
 end
 ```
@@ -60,10 +60,28 @@ for i in 1..100:
 	if is_even(i):
 		some_var       = 1
 		some_other_var = 2
-		print 'Even!';
+		print 'Even!'
 	end
 end
 ```
 
 One should note that even when the tabs used for indentation are resized, the
 code maintains its proper alignment. Tabs must never be used for alignment.
+
+When one comes to understand the distinction between indentation and alignment,
+the solution to other problems becomes apparent. One such example is how to
+align long assignments or function calls. The solution, however, is simple: tabs
+should continue to be used for indentation, and spaces for alignment. The result
+may be that tabs (for indentation) are immediately followed by spaces (for
+alignment), as in the following code snippet:
+
+```
+if do_query is true:
+	query_sql = "SELECT *" .
+	            "FROM table_name" .
+	            "WHERE some_condition = 't'"
+end
+```
+
+Note that each of the three lines in the `if` conditional block begins with one
+tab, followed by spaces where necessary for alignment.
