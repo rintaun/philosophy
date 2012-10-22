@@ -26,7 +26,8 @@ end
 ```
 
 Each level of nesting must be indented exactly one level, and each level of
-indentation must use exactly one tab. There are a number of benefits to using tabs over spaces for indentation, but among them are the following:
+indentation must use exactly one tab. There are a number of benefits to using
+tabs over spaces for indentation, but among them are the following:
 
 * Tabs have a configurable visual width
 * Tabs have a smaller bytesize
@@ -36,7 +37,8 @@ indentation must use exactly one tab. There are a number of benefits to using ta
 
 Unlike indentation, which represents the logical or lexical nesting level in
 code, alignment is purely aesthetic. It is used to make code more readable by
-ligning up variable assignments, logical conditions, etc. Spaces must be used for alignment, as in the following example:
+ligning up variable assignments, logical conditions, etc. Spaces must be used
+for alignment, as in the following example:
 
 ```
 some_var       = 1
@@ -50,16 +52,18 @@ confuse the concepts of indentation and alignment. A common complaint is that
 when using tabs, if a different tab width is used, then the code "looks ugly."
 When indentation and alignment are properly differentated, however, this
 immediately becomes a nonissue. As tabs are used only for indentation, and
-spaces for alignment, code retains its proper alignment even upon tab resize. For example, combining our two previous examples:
+spaces for alignment, code retains its proper alignment even upon tab resize.
+For example, combining our two previous examples:
 
 ```
 for i in 1..100:
 	if is_even(i):
 		some_var       = 1
-		some_other_var = 2	
+		some_other_var = 2
 		print 'Even!';
 	end
 end
 ```
 
-One should note that even when the tabs used for indentation are resized, the code maintains its proper alignment. Tabs must never be used for alignment.
+One should note that even when the tabs used for indentation are resized, the
+code maintains its proper alignment. Tabs must never be used for alignment.
